@@ -1,0 +1,48 @@
+
+*mostrar mensasje tipo notificacion
+	Toast.makeTest(this),"<mensaje>",Toast.LENGHT_LONG).show();
+
+*ciclo de vida de los activites cunado cierras y/o abres la app
+ 	onCreate/cuando de crea la app
+	onStart/cunado inia la app
+	onResume
+	onPause
+	onStop
+	onRestart
+	onDestroy 
+
+@Override
+protected void onCreate(Bundle savedInstanceState){
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    Toast.makeText(this, "onCreate", Toast.LENGTH_LONG).show();
+}
+*para buscar y/o selecionar un id 
+	findViewById(R.id.<nomedelID>);
+*castin    ###nOTa se crea cuando no hay una variable del elemento como definido = a algo
+	btn=(Button)findViewById(R.id.<nomedelID>);
+*para hacer eventos
+	View btn;
+	btn.setOnClickListener(new View.OnClickListener() {
+	    @Override
+	    public void OnClick(View view){
+	    	Toast.makeText(MainActivity.this, "<mensaje>", Toast.LENGTH_LONG).show();
+	    }
+	<todo lo que quierees hacer >
+	});
+
+	@override
+	public void onCLick(View view) {
+	    <lo que quieres que haga>	
+	}
+*acceder al segundo activity
+	@override
+	public void ONclick(View view) {
+	     Intent intent = new Intent(MainActicity.this, <nombre del activity>.class);
+	     intent.putExtra("greeter",GREETER);
+             startActivity(intent);	
+	}	
+####nOTa al crear el segundo acitivity escribit   
+	tools:context="<direecion de donde se creo DXDXD>"
+
+ 	y tambien se crea un archivo java igual al principal
